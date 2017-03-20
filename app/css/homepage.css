@@ -2,15 +2,34 @@ html,
 body {
     height: 100%;
     width: 100%;
+    background: #aeee5a;
+}
+
+body,
+p,
+div {
+    padding: 0;
     margin: 0;
 }
 
-body {
-    background: #aeee5a;
-    height: 100%;
+.center {
+    text-align: center;
 }
 
-.round-corner {}
+.title_size {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 20px #666;
+}
+
+.title_size .title_sub {
+    font-size: 20px;
+}
+
+.title_content{
+	height: 30%;
+}
 
 #main-bg {
     height: 100%;
@@ -19,32 +38,25 @@ body {
 }
 
 #content-bg {
-    position: absolute;
     bottom: 50px;
-    height: 80%;
-    width: 100%;
+    height: 70%;
+    width: 90%;
     background: url('../img/content-bg.jpg') no-repeat center fixed;
-    border: 10px solid #39333c;
+    border: 4px solid #39333c;
     background-size: cover;
+    margin: 0 50px auto;
+    left: 0;
+    right: 0;
     position: absolute;
+    display: flex;
+    border-radius: 10px;
 }
 
 #mid-part,
 #left-part,
 #right-part {
-    width: 33.33%;
     height: 100%;
-    border: solid /*#39333c*/#ff0000;
-    border-left: 20px;
-    border-right: 20px;
-    border-bottom: 50px;
-    border-top: 50px;
-}
-
-#left-part {
-    float: left;
-}
-
-#right-part {
-    float: right;
+    border: solid 4px #39333c;
+    flex: 1;
+    box-sizing: border-box;
 }
