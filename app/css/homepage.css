@@ -1,18 +1,151 @@
-html,
-body {
-    height: 100%;
-    width: 100%;
-    background: #aeee5a;
-}
-
-body,
-p,
-div {
-    padding: 0;
+html, body ,div,p,ul ,li{
     margin: 0;
+    padding: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft Yahei";
+    overflow: hidden;
+}
+a {
+    outline: medium none;
+    text-decoration: none;
+}
+img {
+    border: 0 none;
+    vertical-align: top;
+}
+ul, li {
+    list-style: outside none none;
+}
+span{
+    display: inline-block;
+}
+.clr:after{
+    display:block;clear:both;content:"";visibility:hidden;height:0
+}
+.clr{
+    zoom:1
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+.video{
+    position: relative;
+    width: 400px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.video video{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+}
+.all_info{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 400px;
+    height: 80%;
+    margin-left: -200px;
+    text-align: center;
+}
+.all_info li{
+    padding: 0 5% 0 0;
+    line-height: 1.8;
+    color: #fff;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.all_info .left{
+    width: 50%;
+    float: left;
+}
+.all_info .left li{
+    padding:0 0 0 5%;
+}
+.all_info .right{
+    width: 50%;
+    padding-top: 10px;
+    float: right;
+}
+.l1{
+    font-family: SimSun
+}
+.l2{
+    font-family: sans-serif
+}
+.l3{
+    font-family: "Times New Roman"
+}
+.l4{
+    font-family: 'YouYuan'
+}
+.l5{
+    font-family:  Geneva
+}
+.l6{
+    font-family: Arial
+}
+.l7{
+    font-family: Helvetica
+}
+.three_btn span{
+    width: 25%;
+    
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'YouYuan';
+    border: 1px solid #fe7780;
+    border-radius: 5px;
+}
+.three_btn span.s1{
+    margin-top: 10px;
+    transform:rotate(-10deg)
+}
+.three_btn span.s2{
+    vertical-align: top;
+}
+.three_btn span.s3{
+    transform:rotate(10deg)
 }
 
-.center {
+
+.book_info{
+    position: absolute;
+    left: 10%;
+    bottom: -70%;
+    height: 100%;
+    width: 80%;
+    background: #fff;
+
+}
+/*.brand-list .item {
+    position: absolute;
+    max-width: 50%;    
+}
+ .center {
     text-align: center;
 }
 
@@ -28,7 +161,7 @@ div {
 }
 
 .title_content{
-	height: 30%;
+    height: 30%;
 }
 
 #main-bg {
@@ -60,3 +193,4 @@ div {
     flex: 1;
     box-sizing: border-box;
 }
+ */
