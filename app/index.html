@@ -8,11 +8,12 @@
 </head>
 
 <body>
+  <div class="content">
     <div class="video">
         <video src="media/bg_v.mp4" loop autoplay></video>
     </div>
     
-    <div class="all_info">
+    <div class="all_info position">
         <div class="wrapper clr">
            <div class="left">
                <ul>
@@ -49,18 +50,133 @@
            <span class="s3">提问</span>
        </div>
        <div class="book_info">
-           
+           <p></p>
+           <div class="write"></div>
+           <div class="btn"><span class="s1">确认</span></div>
        </div>
+       
     </div>
+    <div class="user_in position"></div>
+    <div class="other_an hide_self position">
+       <ul>
+         <li>答案一</li>
+         <li>答案二</li>
+         <li>答案三</li>
+         <li>答案四</li>
+         <li>答案无</li>
+       </ul>
+     </div>
+     <div class="user_qifa position">
+       <div class="write_in" contenteditable="true"></div>
+       <div class="get_more clr"><span class="s1">返回</span><span class=" s2">查看更多</span></div>
+       <div class="qifa position hide_self">
+         <ul>
+           <li>答案一</li>
+           <li>答案二</li>
+           <li>答案三</li>
+           <li>答案四</li>
+           <li>答案无</li>
+         </ul>
+       </div>
+     </div>
+     <div class="user_tiwen position">
+       <div class="write_in" contenteditable="true"></div>
+       <div class="get_more clr"><span class="s1">返回</span><span class=" s2">确认</span></div>
+     </div>
+     <div class="fly_div">
+        <ul>
+           <li >赵雷为何会触怒30岁的女性？</li>
+           <li >3.15消费者如何快速维权？</li>
+           <li >科学家确强血型是真的吗？</li>
+           <li >4成中国人有睡眠障碍是怎么回事？</li>
+           <li >你对安样的态度？</li>
+           <li >朴槿惠会被终身监禁吗？</li>
+           <li >实习丨主识，而不是工资？</li>
+           <li >饭是什么感受？</li>
+           <li >日本核污染地区食品销售到中国的有哪些？</li>
+           <li >区食品有哪些？</li>
+       </ul>
+     </div>
+  </div>
 <script src="js/jquery-1.12.3.min.js"></script>
-
+<script src="js/layer.js"></script>
 <script>
 $(function(){
-
-
-
-
-
+  setInterval(function(){
+    $('.fly_div').addClass('animata')
+    setTimeout(function(){
+      $('.fly_div').removeClass('animata')
+    },1000)
+  },3000)
+  /*垂直居中*/
+   $('.other_an').css('lineHeight',$(this).height()+'px');
+   $('.qifa').css('lineHeight',$(this).height()+'px');
+   /*选中问题*/
+  $('.wrapper li').click(function(event) {
+    $('.book_info p').html($(this).html())
+    return false
+  });
+  $('.wrapper li').on('dblclick',function(event) {
+    $('.other_an').show()
+  });
+  $('.hide_self').click(function(event) {
+    if (event.target == this) {
+      $(this).hide()
+    }
+    return false
+  });
+  /*问答*/
+  $('.three_btn .s1').click(function(event) {
+    if ($('.book_info p').html().length<1) {
+      layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        shadeClose: true,
+        skin: 'alert_q',
+        content: '请选择要回答的问题！'
+      });
+      return
+    }
+    $('.book_info').addClass('an').find('.write').attr('contenteditable', true).focus();
+    $('.user_in').show()
+    return false
+  });
+  $('.user_in').click(function(event) {
+    if (event.target == this) {
+      $('.user_in').hide()
+      $('.book_info').removeClass('an').find('.write').attr('contenteditable', false)
+    }
+    return false
+  });
+  /*启发*/
+  $('.three_btn .s2').click(function(event) {
+    $('.user_qifa').show().find('.write_in').focus()
+    return false
+  });
+  $('.user_qifa .get_more .s2').click(function(event) {
+    $('.user_qifa .qifa').show()
+    return false
+  });
+  $('.user_qifa .get_more .s1').click(function(event) {
+    $('.user_qifa').hide()
+    $('.user_qifa .write_in').html('')
+    return false
+  });
+  /*提问*/
+  $('.three_btn .s3').click(function(event) {
+    $('.user_tiwen').show().find('.write_in').focus()
+    return false
+  });
+  $('.user_tiwen .get_more .s2').click(function(event) {
+    $('.user_tiwen .qifa').show()
+    return false
+  });
+  $('.user_tiwen .get_more .s1').click(function(event) {
+    $('.user_tiwen').hide()
+    $('.user_tiwen .write_in').html('')
+    return false
+  });
 });
 </script>
 </body>
