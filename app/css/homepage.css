@@ -48,6 +48,25 @@ span{
     -ms-user-select: none;
     user-select: none
 }
+@font-face {font-family: font1;src: url('../fonts/1.TTF');}
+@font-face {font-family: font2;src: url('../fonts/2.TTF');}
+@font-face {font-family: font3;src: url('../fonts/3.TTF');}
+@font-face {font-family: font4;src: url('../fonts/4.TTF');}
+@font-face {font-family: font5;src: url('../fonts/5.TTF');}
+@font-face {font-family: font9;src: url('../fonts/6.TTF');}
+@font-face {font-family: font7;src: url('../fonts/7.TTF');}
+@font-face {font-family: font8;src: url('../fonts/8.TTF');}
+@font-face {font-family: font6;src: url('../fonts/9.TTF');}
+@font-face {font-family: font10;src: url('../fonts/10.TTF');}
+@font-face {font-family: font11;src: url('../fonts/11.TTF');}
+@font-face {font-family: font12;src: url('../fonts/12.TTF');}
+@font-face {font-family: font13;src: url('../fonts/13.TTC');}
+@font-face {font-family: font14;src: url('../fonts/14.TTF');}
+@font-face {font-family: font15;src: url('../fonts/15.TTF');}
+@font-face {font-family: font16;src: url('../fonts/16.TTF');}
+@font-face {font-family: font17;src: url('../fonts/17.TTF');}
+@font-face {font-family: font18;src: url('../fonts/18.OTF');}
+
 .position{
     position: absolute;
     width: 100%;
@@ -57,7 +76,7 @@ span{
 }
 .content{
     position: relative;
-    width: 400px;
+    width: 395px;
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -84,7 +103,7 @@ span{
     text-align: center;
 }
 .all_info li{
-    padding: 0 5% 0 0;
+    margin: 0 5% 0 0;
     line-height: 1.8;
     color: #fff;
     font-weight: bold;
@@ -97,57 +116,68 @@ span{
     float: left;
 }
 .all_info .left li{
-    padding:0 0 0 5%;
+    margin:0 0 0 5%;
 }
 .all_info .right{
     width: 50%;
     padding-top: 10px;
     float: right;
 }
-.l1{
-    font-family: SimSun
+.l1{font-family: font1}
+.l2{font-family: font2}
+.l3{font-family: font3}
+.l4{font-family: font4}
+.l5{font-family: font5}
+.l6{font-family: font6}
+.l7{font-family: font7}
+.l8{font-family: font8}
+.l9{font-family: font9;
+   
 }
-.l2{
-    font-family: sans-serif
-}
-.l3{
-    font-family: "Times New Roman"
-}
-.l4{
-    font-family: 'YouYuan'
-}
-.l5{
-    font-family:  Geneva
-}
-.l6{
-    font-family: Arial
-}
-.l7{
-    font-family: Helvetica
+.l10{font-family: font10}
+.l11{font-family: font11}
+.l12{font-family: font12}
+.l13{font-family: font13}
+.l14{font-family: font14}
+.l15{font-family: font15;
+background: url('../img/q01.png') no-repeat center;
+    background-size: 100%;}
+.l16{font-family: font16;
+    background: url('../img/q01.png') no-repeat center;
+    background-size: 100%;}
+.l17{font-family: font17;
+background: url('../img/q02.png') no-repeat center;
+    background-size: 100%}
+.l18{font-family: font18;
+background: url('../img/q03.png') no-repeat center;
+    background-size: 100%}
+.three_btn{
+
 }
 .three_btn span{
     width: 25%;
     margin: 0 2.5%;
-    line-height: 1.5;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'YouYuan';
-    border: 1px solid #fe7780;
-    border-radius: 5px;
     cursor: pointer;
 }
-.three_btn span.s1{
-    margin-top: 10px;
-    transform:rotate(-10deg)
+.three_btn span img{
+    width: 100%;
 }
-.three_btn span.s2{
+.three_btn span.s0 img{
+    opacity: 0
+}
+.three_btn span.s1.s0{
+    background: url('../img/a01.png') no-repeat center;
+    background-size: 100%;
+}
+.three_btn span.s2.s0{
     vertical-align: top;
+    background: url('../img/a03.png') no-repeat center;
+    background-size: 100%;
 }
-.three_btn span.s3{
-    transform:rotate(10deg)
+.three_btn span.s3.s0{
+    background: url('../img/a05.png') no-repeat center;
+    background-size: 100%;
 }
-
 .user_in{
     display: none;
     z-index: 1;
@@ -156,17 +186,69 @@ span{
     position: relative;
     height: 100%;
     width: 70%;
-    margin: 7% auto;
+    margin: 8% auto;
     padding: 10%;
-    background: #fff;
+    background: #f1f1f1 ;
+    background-size: 100%;
     transition:all 1s ease;
     z-index: 2
 }
+.book_info.an .p1{
+    opacity: 0
+}
+.book_info.an.diff .p1{
+    opacity: 1
+}
+.book_info .p1{
+    position: relative;
+    min-height: 5%;
+    padding: 2%;
+    text-align: left;
+    line-height: 1.7;
+    background: #ffdbb4;
+    border:1px solid #ff6c00;
+    border-radius: 10px;
+    transition:all .7s ease;
+}
+.book_info .p1.p0:after{
+    content: ""
+}
+.book_info .p1:after{
+    content: '请选中要回答的问题！';
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    line-height: 1.5;
+}
+.book_info .img1{
+    position: absolute;
+    top: -3%;
+    left:0;
+    width: 100%;
+}
 .book_info .write{
-    height: 50%;
+    display: none;
+    position: relative;
     margin-top: 2%;
     text-align: left;
+    transition:all .7s ease;
+}
+.book_info .write .huida{
+    position: relative;
+}
+.book_info .write .huida img{
+    width: 100%
+}
+.book_info .write .huida input{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    height: 130%;
+    border:0;
+    font-size: 16px;
+    line-height: 1.5;
     outline: none;
+    background: transparent;
 }
 .book_info.an{
     margin: -80% auto 0;
@@ -179,28 +261,68 @@ span{
     background: #03f;
     border-radius: 10%;
 }
+.user_btn{
+    margin-top: 2.5%;
+    text-align: right;
+}
+.user_btn span{
+    width: 18%
+}
+.user_btn span img{
+    width: 100%
+}
+.user_btn span.s0 img{
+    opacity: 0;
+}
+.user_btn .s1{
+    background: url('../img/c02.png') no-repeat center;
+    background-size: 100%;
+}
+.user_btn .s2{
+    background: url('../img/c04.png') no-repeat center;
+    background-size: 100%;
+}
+/*启发*/
+
 /* 其他人的回答以及启发 */
-.other_an,.qifa{
+.other_an,.user_qifa{
     display: none;
+    
     text-align: center;
     line-height: 100%;
     font-size: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.9);
     z-index: 3;
 }
-.other_an ul,.qifa ul{
+.other_an ul,.user_qifa ul{
+    position: relative;
     display: inline-block;
-    line-height: 1.5;
-    font-size: 25px;
+    margin-top: -20%;
+    line-height: 2;
+    min-width: 80%;
+    font-size: 16px;
     font-weight: bold;
     color: #fff;
     text-shadow:4px 4px 12px rgba(174, 34, 151, 0.78);
     vertical-align: middle;
 }
-.other_an ul li,.qifa ul li{
+.other_an ul .s1,.user_qifa ul .s1{
+    width: 20%;
+    background: url('../img/r02.png') no-repeat center;
+    background-size: 100%;
+}
+.other_an ul .s1 img,.user_qifa ul .s1 img{
+    width: 100%;
+}
+.other_an ul li,.user_qifa ul li{
+    padding:0 5%;
+    margin: 5% 0;
+    text-align: left;
     overflow: hidden;
     white-space: nowrap;
     text-overflow:ellipsis;
+    background: url('../img/q03.png') no-repeat center;
+    background-size: 100% 100%;
 }
 .alert_q{
     width: 300px;
@@ -213,73 +335,25 @@ span{
 }
 /* 启发 */
 .user_qifa{
-    display: none;
-}
-.user_qifa .write_in{
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 70%;
-    height: 30%;
-    padding: 5%;
-    background: #fff;
-    outline: none;
-    overflow: auto;
-}
-.user_qifa .qifa{
     z-index: 4;
 }
-.user_qifa .get_more{
-    position: absolute;
-    top: 56%;
-    right: 10%;
-    width: 90%;
+.inspire .get_more{
     text-align: right;
-}
-.user_qifa .get_more span{
-    padding:0 5%;
-    margin: 0 5px;
-    /* border: 1px solid #ccc; */
-    color: #fff;
-    background: #03f;
-    border-radius: 5%;
-    cursor: pointer;
+    margin-top: 10px;
 }
 /* 提问 */
-.user_tiwen{
-    display: none;
+.inspire .get_more span{
+    width: 40%;
+    background: url('../img/c06.png') no-repeat center;
+    background-size: 80%;
+    text-align: center;
 }
-.user_tiwen .write_in{
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 70%;
-    height: 30%;
-    padding: 5%;
-    background: #fff;
-    outline: none;
-    overflow: auto;
+.inspire .get_more span.s0 img{
+    opacity: 0
 }
-.user_tiwen .qifa{
-    z-index: 4;
+.inspire .get_more span img{
+    width: 80%
 }
-.user_tiwen .get_more{
-    position: absolute;
-    top: 56%;
-    right: 10%;
-    width: 90%;
-    text-align: right;
-}
-.user_tiwen .get_more span{
-    padding:0 5%;
-    margin: 0 5px;
-    /* border: 1px solid #ccc; */
-    color: #fff;
-    background: #03f;
-    border-radius: 5%;
-    cursor: pointer;
-}
-
 .content .fly_div{
     position: absolute;
     top: 22%;
