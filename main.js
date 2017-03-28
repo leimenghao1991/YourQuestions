@@ -62,7 +62,32 @@ ipcRenderer.on('answers', (event, arg) => {
 })
 
 */
-ipcMain.on('get-question', function(event, arg) {
+/*获取问题的答案，传参为问题*/
+ipcMain.on('get-answers', function(event, arg) {
 	var answers = fileUtils.readAnswers(arg)
     event.sender.send('answers', answers)
+})
+
+/*获取所有问题，返回数组*/
+ipcMain.on('get-questions', (event, arg) => {
+    var questions = fileUtils.readAllQuestions()
+    event.sender.send('questions', questions)
+})
+
+/*保存答案，传参是个数组，第一个元素是问题，第二个元素是答案*/
+ipcMain.on('save-question', (event, args)=>{
+    var question = args[0]
+    var answers = args[1]
+    fileUtils.saveAnswer(question, answers)
+})
+
+/*保持启发*/
+ipcMain.on('save-think', (event, arg) => {
+    fileUtils.saveThink(arg)
+})
+
+/*读取启发数据，返回数组*/
+ipcMain.on('get-thinks', (event, arg) => {
+    var thinks = fileUtils.readThinks()
+    event.sender.send('thinks', thinks)
 })

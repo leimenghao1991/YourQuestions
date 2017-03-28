@@ -31,7 +31,7 @@ function readAnswers(question){
 	nconf1.load()
 	return nconf1.get(question)
 }
-function svaeThink(think) {
+function saveThink(think) {
 	var thinksInFile = readThinks()
 	if (!thinksInFile) {
 		thinksInFile = new Array()
@@ -62,6 +62,6 @@ module.exports = {
 	readAnswers : readAnswers,
 	questionsFilePath : questionsFilePath,
 	readAllQuestions : readAllQuestions,
-	svaeThink : svaeThink,
+	saveThink : saveThink,
 	readThinks : readThinks,
 }
