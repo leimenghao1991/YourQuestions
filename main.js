@@ -10,7 +10,7 @@ app.on('ready', () => {
     var size = electronScreen.getPrimaryDisplay().workAreaSize
     var height = size.height > 1920 ? 1920 : size.height
     var scaleRatio = height / 1920
-    var width = 1080 * scaleRatio
+    var width = Math.floor(1080 * scaleRatio)
 
     mainWindow = new BrowserWindow({ width: width, height: height, frame: false })
     mainWindow.loadURL('file://' + __dirname + '/app/index.html')
